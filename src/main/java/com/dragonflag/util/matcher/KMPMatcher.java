@@ -196,6 +196,8 @@ public class KMPMatcher extends ExtendedMatcher {
         }
         return next;
     }
+
+    ///////////复杂度为O(n^2)/////////
 //    /**
 //     * 构建next数组
 //     * @param ptr 模式字符串
