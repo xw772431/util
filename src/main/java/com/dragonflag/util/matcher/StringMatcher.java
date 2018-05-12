@@ -1,4 +1,4 @@
-package com.dragonflag.matcher;
+package com.dragonflag.util.matcher;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-import com.dragonflag.matcher.ExtendedMatcher;
-import com.dragonflag.matcher.KMPMatcher;
-import com.dragonflag.matcher.StringMatcher;
+import com.dragonflag.util.matcher.ExtendedMatcher;
+import com.dragonflag.util.matcher.KMPMatcher;
+import com.dragonflag.util.matcher.StringMatcher;
 import org.junit.Test;
 
 public class MatcherTest {
