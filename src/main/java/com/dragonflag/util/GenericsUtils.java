@@ -25,18 +25,18 @@ public class GenericsUtils {
      * 得到字段泛型参数信息
      *
      * @param field 字段反射实例
-     *              <br><br>
-     *              如：字段f定义如下
-     *              <br><br>
-     *              <code>
-     *              f = Map&lt;String, List&lt;Integer&gt;&gt;
-     *              </code>
-     *              <br><br>
-     *              以该字段作为参数调用，返回结果为：
-     *              <br><br>
-     *              <code>
-     *              [String, List&lt;Integer&gt;]
-     *              </code>
+     * <br><br>
+     * 如：字段f定义如下
+     * <br><br>
+     * <code>
+     * f = Map&lt;String, List&lt;Integer&gt;&gt;
+     * </code>
+     * <br><br>
+     * 以该字段作为参数调用，返回结果为：
+     * <br><br>
+     * <code>
+     * [String, List&lt;Integer&gt;]
+     * </code>
      * @return
      */
     public static GenericInfo getFieldGenericInfo(Field field) {
