@@ -2,11 +2,6 @@ package com.dragonflag.util;
 
 import java.lang.reflect.*;
 import java.util.*;
-import java.util.function.BiConsumer;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Collector;
 
 /**
  * 泛型工具类
@@ -292,118 +287,6 @@ public class GenericsUtils {
             int result = rawType != null ? rawType.hashCode() : 0;
             result = 31 * result + Arrays.hashCode(params);
             return result;
-        }
-    }
-
-    Map<String, List<? extends Comparable<?>>> map;
-    List<? super Integer> name;
-
-    public static void main(String[] args) throws NoSuchFieldException {
-
-//	    System.out.println(Arrays.toString(getClassGenericInfos(MMap.class)));
-
-
-        Class<?> c = MMap.class;
-        Field f = c.getDeclaredField("map");
-        GenericInfo[] infos = getFieldGenericInfos(f);
-//        infos = getClassGenericInfos(MMap.class);
-        System.out.println(Arrays.toString(infos));
-    }
-
-    static class MMap<A, D, T> extends MyMap implements Comparable<Map<String, List<Integer>>>, Collector<A, D, T> {
-
-        Map<? extends A, ? extends D> map;
-
-        @Override
-        public Supplier<D> supplier() {
-            return null;
-        }
-
-        @Override
-        public BiConsumer<D, A> accumulator() {
-            return null;
-        }
-
-        @Override
-        public BinaryOperator<D> combiner() {
-            return null;
-        }
-
-        @Override
-        public Function<D, T> finisher() {
-            return null;
-        }
-
-        @Override
-        public Set<Characteristics> characteristics() {
-            return null;
-        }
-
-        @Override
-        public int compareTo(Map<String, List<Integer>> o) {
-            return 0;
-        }
-    }
-
-    static class MyMap extends AbstractMap<String, List<? extends Comparable<? extends Number>>> implements Map<String, List<? extends Comparable<? extends Number>>> {
-        @Override
-        public int size() {
-            return 0;
-        }
-
-        @Override
-        public boolean isEmpty() {
-            return false;
-        }
-
-        @Override
-        public boolean containsKey(Object key) {
-            return false;
-        }
-
-        @Override
-        public boolean containsValue(Object value) {
-            return false;
-        }
-
-        @Override
-        public List<? extends Comparable<? extends Number>> get(Object key) {
-            return null;
-        }
-
-        @Override
-        public List<? extends Comparable<? extends Number>> put(String key, List<? extends Comparable<? extends Number>> value) {
-            return null;
-        }
-
-        @Override
-        public List<? extends Comparable<? extends Number>> remove(Object key) {
-            return null;
-        }
-
-        @Override
-        public void putAll(Map<? extends String, ? extends List<? extends Comparable<? extends Number>>> m) {
-
-        }
-
-        @Override
-        public void clear() {
-
-        }
-
-        @Override
-        public Set<String> keySet() {
-            return null;
-        }
-
-        @Override
-        public Collection<List<? extends Comparable<? extends Number>>> values() {
-            return null;
-        }
-
-        @Override
-        public Set<Entry<String, List<? extends Comparable<? extends Number>>>> entrySet() {
-            return null;
         }
     }
 }
