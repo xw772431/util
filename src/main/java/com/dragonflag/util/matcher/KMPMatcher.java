@@ -13,9 +13,9 @@ public class KMPMatcher extends ExtendedMatcher {
         if (str == null || ptr == null || str.length() == 0 || ptr.length() == 0)
             return;
 
-        if (reverse) {
+        if (reverse)
             matchReversely(str, ptr, callback);
-        } else
+        else
             match(str, ptr, callback);
     }
 
